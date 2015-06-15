@@ -1,1 +1,1 @@
-index.coffee
+console.log "HELLO WORLD"
