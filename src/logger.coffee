@@ -11,10 +11,6 @@ chalk = require('chalk')
 require 'sugar'
 
 exports.Logger = {
-  log: []
-  init: ()->
-    @log = []
-    return this
   completed: ()->
     return @log.join("\n")
   append: (type, msg)->
@@ -41,4 +37,4 @@ exports.Logger = {
   todo: (msg)->
     @append chalk.bgRed.black(" TODO "), msg  
 
-}.init()
+}
