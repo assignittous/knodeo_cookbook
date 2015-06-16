@@ -19,7 +19,6 @@ exports.Logger = {
   append: function(type, msg) {
     var entry;
     entry = "[" + (Date.create().format('{HH}:{mm}:{ss}')) + "] " + type + " " + msg;
-    this.log.push(chalk.stripColor(entry));
     return console.log(entry);
   },
   debug: function(msg) {
