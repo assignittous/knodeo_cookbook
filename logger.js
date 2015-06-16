@@ -13,11 +13,6 @@ chalk = require('chalk');
 require('sugar');
 
 exports.Logger = {
-  log: [],
-  init: function() {
-    this.log = [];
-    return this;
-  },
   completed: function() {
     return this.log.join("\n");
   },
@@ -55,4 +50,4 @@ exports.Logger = {
   todo: function(msg) {
     return this.append(chalk.bgRed.black(" TODO "), msg);
   }
-}.init();
+};

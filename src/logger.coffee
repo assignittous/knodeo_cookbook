@@ -15,7 +15,6 @@ exports.Logger = {
     return @log.join("\n")
   append: (type, msg)->
     entry = "[#{Date.create().format('{HH}:{mm}:{ss}')}] #{type} #{msg}"
-    @log.push chalk.stripColor(entry)
     console.log entry
   debug: (msg)->
     @append chalk.bgWhite.black(" DEBUG "), msg    
